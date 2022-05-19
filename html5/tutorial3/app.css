@@ -1,0 +1,41 @@
+nav{
+    background-color:#9BA3EB;
+    padding:5px;
+}
+
+li {
+    display:inline;
+}
+
+ul {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#home {
+    text-align: center;
+    background-color: #DBDFFD;
+    padding:10px;
+}
+
+article > img {
+    width: 100px;
+    float: right;
+    margin:5px;
+}
+
+#blog {
+    display:flex;
+    width:auto;
+}
+
+footer {
+    background-color: #242F9B;
+    color:azure;
+    padding:10px;
+    text-align: center;
+
+}
