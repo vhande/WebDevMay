@@ -37,5 +37,8 @@ footer {
     color:azure;
     padding:10px;
     text-align: center;
+}
 
+main#login-container {
+    background-color:whitesmoke;
 }
