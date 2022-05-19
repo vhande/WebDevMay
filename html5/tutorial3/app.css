@@ -42,3 +42,7 @@ footer {
 main#login-container {
     background-color:whitesmoke;
 }
+
+main#gallery {
+    text-align: center;
+}
