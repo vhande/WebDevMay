@@ -65,7 +65,9 @@ body {
     margin: 0 auto;
     outline: 3px solid green;
 }
-
+table {
+    border-collapse:collapse;
+}
 th, td {
     border:1px solid black;
     padding: 0.3em;
