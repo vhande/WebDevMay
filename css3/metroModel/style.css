@@ -1,0 +1,120 @@
+
+body{
+    margin:0px;
+    width:485px;
+    height: 565px;
+
+}
+
+.metro {
+    background-color: gainsboro;
+    margin:15%;
+
+}
+
+.first-seat-left{
+    margin: 0px 0px 10px 10px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-seat-right{
+    margin: 0px 10px 10px 10px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-seat-left{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 10px 30px 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.second-seat-right{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 10px 10px 1px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-seat-left {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 1px 30px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-seat-right {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 1px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.door-right {
+    margin-left: auto; 
+    margin-right: 0;
+    height:100px;
+    width: 10px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-items:left;
+    flex-direction: row-reverse;
+    
+}
+
+.door-left {
+    height:100px;
+    width: 10px;
+    background-color: orange;
+    margin-right: auto; 
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+.bigcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-text{
+    transform: rotate(-90deg);
+}
+.right-text{
+    transform: rotate(90deg);
+}
