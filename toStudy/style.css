@@ -1,0 +1,136 @@
+/* Header w/navbar using flexbox */
+body{
+    margin:0px;
+    background-color: #F6F2D4;
+}
+a {
+    text-decoration: none;
+    color: #001D6E;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #78938A;
+    
+}
+header li{  
+    list-style-type: none;
+    display: inline;
+    font-size:20px;   
+    color: #495371;
+    padding:5px;
+    margin-right:10px;
+}
+
+#mainTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #112B3C;
+    flex:1;
+}
+
+#logo {
+    margin-left:5px;
+    color:#FFE59D;
+    font-size: 35px;
+}
+
+i {
+    color: #2D4263;
+}
+
+/* End of header w/navbar */
+
+/* Form style */
+
+
+/* form page style */
+
+.form {
+    margin-top: 100px;
+}
+
+.centered {
+    text-align: center;;
+}
+
+fieldset {
+   margin:40px;
+}
+
+
+legend {
+    font-size: 20px;
+    padding: 10px;
+    
+}
+ input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+ }
+
+ input:focus {
+     background-color: yellow;
+ }
+ 
+ textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  
+ }
+ button {
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+ }
+
+
+ /* form page ends */
+
+
+ /* align left or right */
+
+section {
+    position:absolute;
+    margin: 80px auto;
+    width:300px;
+    right:0px;
+   
+}
+
+p::first-letter {
+    background-color: red;
+    font-size: 10em;
+    opacity: 0.50;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 2s;
+    
+  animation-iteration-count
+  : 
+  infinite
+  ;
+  }
+  
+  @keyframes example {
+    0%   {background-color: red; left:0px;}
+    50%  {background-color: yellow; left:200px;}
+    100% {background-color: red; left:0px;}
+  }

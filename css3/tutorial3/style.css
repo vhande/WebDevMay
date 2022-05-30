@@ -1,0 +1,92 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+header {
+    background-color: red;
+    padding: 3px;
+    color:aliceblue;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+    padding:3px;
+    color:aliceblue;
+    text-align: center;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    display: inline;
+    font-size: 20pt;
+    margin-right: 1em;
+}
+
+aside {
+    background-color: burlywood;
+    padding: 3px;
+    width:23%;
+    float:left;
+    margin:5px;
+}
+
+
+aside > ul {
+    list-style-type: none;
+}
+
+aside > ul > li {
+    font-size: 18pt;
+    
+    
+}
+
+main {
+    background-color: brown;
+    width: 73%;
+    float:right;
+    margin:5px;
+    color:white;
+}
+
+footer {
+    background-color: black;
+    clear: both;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    padding: 3px;;
+}
+
+article {
+    /* height: 80px; */
+    background-color: yellow;
+    color:black;
+
+}
+
+article > p {
+    /* white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    overflow: hidden; */
+
+    column-count:3 ;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+}
+.box {
+    background-color: whitesmoke;
+    height: 100px;
+    margin: 1px;
+    color:black;
+}

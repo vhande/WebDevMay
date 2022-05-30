@@ -27,28 +27,17 @@ body{
     margin-right: auto
 }
 
-.first-seat-left{
-    margin: 0px 0px 10px 10px;
-}
-
-.first-seat-right{
+.first-seat-left, .first-seat-right{
     margin: 0px 10px 10px 10px;
 }
 
-.second-seat-left{
-    margin: 10px 30px 1px 10px;
+.second-seat-left, .second-seat-right{
+    margin: 10px 10px 0px 10px;
+    border-bottom:1px solid black;
 }
-
-.second-seat-right{
-    margin: 10px 10px 1px 10px;
-}
-
-.third-seat-left {
-    margin: 1px 30px 10px 10px;
-}
-
-.third-seat-right {
-    margin: 1px 10px 10px 10px;
+ 
+.third-seat-left, .third-seat-right{
+    margin: 0px 10px 10px 10px;
 }
 
 .door-right {

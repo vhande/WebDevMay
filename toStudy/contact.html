@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/test-app/moon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MezzoLuna Contact</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><i id="logo" class="fa-solid fa-moon"></i></a>
+        <a id="mainTitle" href="index.html"><h1>Mezzo Luna</h1></a>
+        <ul>
+            <li>
+                <i class="fa-solid fa-house"></i>
+            <a href="index.html">Home</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-utensils"></i>
+                <a href="menu.html">Menu</a></li>
+            <li>
+                <i class="fa-solid fa-image"></i>
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+<section class="form">
+   <form method="post" action="/save">
+    <fieldset>
+        <legend>Online Reservation</legend>
+        <label>First Name</label><br/>
+        <input type="text" name="firstName" placeholder="John"><br/>
+        <label>Last Name</label><br/>
+        <input type="text" name="lasttName" placeholder="Doe"><br/>
+        <label>Email</label><br/>
+        <input type="email" name="email" placeholder="doe@example.com"><br/>
+        <label>Date</label><br/>
+        <input type="datetime-local" name="reservation-time" value="2022-05-20T19:30" min="2022-05-20 T20:00" max="2022-06-14 T22:00">
+        <label>Message</label><br/>
+        <textarea name="comment" form="usrform" placeholder="Write your question here..."></textarea></br>
+        <div class="centered">
+        <button>Send</button>
+        </div>
+    </fieldset>
+    
+    </form>
+</section>
+
+</body>
+</html>
