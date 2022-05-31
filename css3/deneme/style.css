@@ -35,9 +35,11 @@ li {
 
 .boxcontainer1  {
     color: black;
-    display: flex;
-    width:auto;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap:10px;
+   
 }
 
 .boxcontainer2 {
