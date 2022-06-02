@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container pt-4">
+        <p class="lead bg-dark text-light p-2">Accordion component</p>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Reports
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Something something</div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                Test
+                </h2>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo " aria-expanded="true" aria-controls="flush-collapseTwo">
+                Info
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="article">
+                        <h3>Article title</h3>
+                            <img src="https://picsum.photos/200
+                            " class="w-100 h-50"/>
+                        </div>
+                </div>
+            </div>
+            </div>
+              </div>
+          </div>
+    </div>
+<hr>
+
+<p class="lead bg-dark text-light">Alert component</p>
+
+<div class="alert alert-success">Your message has been sent!</div>
+
+<div class="alert alert-danger">Something went wrong!</div>
+
+<div class="alert alert-info">Info</div>
+
+<div class="alert alert-warning">Fill the inputs!</div>
+
+<p class="lead bg-dark text-light">Badge component</p>
+
+<h1>Badge text <span class="badge bg-primary">1</span></h1>
+<span class="badge bg-primary">Messages <span class="text-warning bg-light text-dark h5 rounded-3">5</span></span>
+
+<hr/>
+
+
+<p class="lead text-light bg-dark">Button group component</p>
+<div class="btn-group-lg">
+    <button type="button"class="btn btn-outline-dark">Previous</button>
+    <button type="button"class="btn btn-outline-danger">Next</button>
+</div>
+
+<hr>
+
+<p class="lead text-light bg-dark">Card component</p>
+
+<div class="card m-5">
+    <img src="https://picsum.photos/200" class="card-img-top w-50 align-self-center"/>
+    <div class="card-body">
+        <h5>This is blog title</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, labore? Voluptatibus consequatur, odio maiores quaerat quod officiis consectetur quas illum excepturi nihil nisi, sunt soluta officia consequuntur ab possimus repellendus!</p>
+    </div>
+</div>
+
+<hr>
+
+<p class="lead text-light bg-dark">Slider</p>
+<div class="container d-block m-auto">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1526512340740-9217d0159da9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmVydGljYWx8ZW58MHx8MHx8&w=1000&q=80" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&w=1000&q=80" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src=https://images.adsttc.com/media/images/5b08/b87c/f197/ccb5/4900/00bd/medium_jpg/The_S_02_filter_edit2_06.jpg?1527298139" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
