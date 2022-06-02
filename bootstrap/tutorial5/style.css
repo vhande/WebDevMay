@@ -3,3 +3,13 @@
     object-fit: cover;
     object-position: top;
 }
+
+.webdev-body {
+    background:url(https://f.hellowork.com/blogdumoderateur/2013/02/nyan-cat-gif-1.gif);
+    background-size:cover;
+}
+
+.intec-body {
+    background:url(https://images.unsplash.com/photo-1598449356475-b9f71db7d847?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&w=1000&q=80);
+    background-size: cover;
+}
