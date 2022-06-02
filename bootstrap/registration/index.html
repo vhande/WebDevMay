@@ -12,66 +12,70 @@
 <body>
     <h1 class="m-2 text-center">Registration Form</h1>
     <div class="container-fluid bg-light p-3">
-
-        <div class="form-group m-2">
-          <label class="mb-2" for="">Your Name</label>
-          <input type="text" class="form-control" placeholder="John Doe">
-        </div>
-
-        <div class="form-group m-2">
-          <label class="mb-2" for="">Email</label>
-          <input type="text" class="form-control" placeholder="Brussel">
-        </div>
-
+      <div class="row">
+        <div col="12">
+          <form action="">
             <div class="form-group m-2">
-                <label class="mb-2">Adress</label>
-                <div class="row">
-                <div class="col-4">
-                  <input type="text" class="form-control" placeholder="City">
-                </div>
-                <div class="col-4">
-                  <input type="text" class="form-control" placeholder="State">
-                </div>
-                <div class="col-4">
-                  <input type="text" class="form-control" placeholder="Zip">
-                </div>
-                </div>
+              <label for="name" class="mb-2" for="">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe">
             </div>
-
-        <div class="form-group m-2">
+            <div class="form-group m-2">
+              <label for="email" class="mb-2">Email</label>
+              <div class="input-group">
+              <input type="email" id="email" class="form-control" placeholder="johndoe">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">@example.com</span>
+              </div>
+              </div>
+            </div>
+            </div>  
+            <div class="form-group m-2">
+              <label class="mb-2">Adress</label>
+              <div class="row">
+              <div class="col-5">
+                <input type="text" class="form-control" placeholder="City">
+              </div>
+              <div class="col-5">
+                <input disabled type="text" class="form-control" placeholder="State">
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control" placeholder="Zip">
+              </div>
+              </div>
+            </div>
+          <div class="form-group m-2">
             <label id="radio" class="mb-2">Choose a color:</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label text-success" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="color" id="green" value="option1" checked>
+                <label class="form-check-label text-success" for="green">
                   Green
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label text-danger" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="color" id="red" value="option2">
+                <label class="form-check-label text-danger" for="red">
                   Red
                 </label>
               </div>
-          </div>
-          <form class="form-floating">
-            <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-            <label for="floatingInputInvalid">Invalid input</label>
+            </div>
+            <div class="form-group m-2">
+              <label for="preference" class="mb-2">Preference</label>
+               <select id="preference" class="form-select mb-2">
+                 <option selected disabled>Choose...</option>
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+               </select>
+             </div>
+             <div class="formgroup m-2">
+              <label for="comment" class="mb-2">Leave Your Comment</label>
+              <textarea id="comment" class="form-control mb-2" rows="9" aria-label="With textarea"></textarea>
+            </div>
+            <button type="button" class="btn d-block mx-auto">Register</button>
           </form>
-          <div class="form-group m-2">
-             <label class="mb-2">Preference</label>
-              <select class="form-select mb-2">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-
-            <div class="formgroup m-2">
-                <label class="mb-2">Leave Comment</label>
-                <textarea class="form-control mb-2" aria-label="With textarea"></textarea>
-            </div>
-      <div class="col-12 text-center"><button type="button" class="btn">Register</button>
+        </div>
+      </div>     
+    </div>
          
     
 
