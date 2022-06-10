@@ -191,10 +191,4 @@
 
         console.log(result + " 🙃 ");
 
-
-
-        
-        
-
-
         // Logical Operators && both should be true or false
