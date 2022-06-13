@@ -37,7 +37,7 @@ arrow function
 
 // getStudentName(student);
 
-var student = {
+var studentParam = {
     name:"John", age:25, isStudent:true, isTeacher:false, scores:[44,55,66,77]
 }
 function verifyStudent (studentParam){
@@ -70,25 +70,19 @@ function getBMI(height,weight) {
     return 0;
 }
 
-getBMI(1.85,65);
+console.log(getBMI(1.85,65));
 
-function netto(salary,taxt) {
-    
+//netto calculator
+
+function netto(salary,tax) {
+    return salary - (salary / 100 * tax);
 }
 
-// console.log(getBMI(1.85,65));
-
-// netto calculator
-
-// function netto(salary,tax) {
-//     return salary - (salary / 100 * tax);
-// }
-
-// console.log(netto(1000,20));
+console.log(netto(1000,20));
 
 
-// const BMI =  (weight,height) => height / (weight * weight);
-// console.log(BMI(1.85,65));
+const BMI =  (weight,height) => height / (weight * weight);
+console.log(BMI(1.85,65));
 
-// const netto1 = (salary,tax) => salary - (salary / 100 * tax);
-// console.log(netto1(2000,30));
+const netto1 = (salary,tax) => salary - (salary / 100 * tax);
+console.log(netto1(2000,30));

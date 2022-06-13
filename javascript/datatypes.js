@@ -85,9 +85,6 @@ var nestedArray = [1,2,3, [4,5,6, [7,8,9]]];
 result = nestedArray[3][1];
 result = nestedArray[3][3][2];
 
-
-
-
-
 console.log(result, typeof result);
+
 
