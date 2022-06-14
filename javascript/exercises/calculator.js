@@ -9,6 +9,6 @@ if (isNaN(userInput1) && isNaN(userInput2)) {
 
 } else {
     
-    var sum = parseFloat(userInput1) + parseFloat(userInput2);
+    var sum = parseFloat(userInput1) + parse(userInput2);
     result.innerText = sum;
 }
