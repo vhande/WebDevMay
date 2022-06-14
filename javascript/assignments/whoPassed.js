@@ -71,7 +71,22 @@ function whoPassedExam(param){
     return param.filter(x => x.score > 60)
 }
 
-console.log(whoPassedExam(_students))
+var passed = whoPassedExam(_students);
+
+for (var i=0; i <passed.length; i++) {
+    console.log(passed[i]['name'] + " passed with the score " + passed[i]['score']);
+}
+
+function whoFailedExam(param) {
+    return param.filter(x => x.score < 60)
+}
+
+var failed = whoFailedExam(_students);
+for (var i=0; i<failed.length; i++) {
+    console.log(failed[i]['name'] + " failed with the score " + failed[i]['score']);
+}
+
+// console.log(whoPassedExam(_students))
 
 
 

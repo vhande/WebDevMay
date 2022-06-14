@@ -36,9 +36,18 @@ let posts = [
   var result = document.getElementById("result");
 
 
-
-
-  button.addEventListener("click", article(posts))
+  function FindPostById(id) {
+    if (posts.filter(value => value.id == id).length != 0) {
+        return posts.filter(value => value.id == id)
+    } else {
+        return [{ title: 'No post found' }]
+    }
+  }
+  button.addEventListener("click", (e) => { e.preventDefault()
+    let post = FindPostById(filter.value)[0]
+        console.log(post.title)
+        result.innerText = post.title 
+  })
   
   
 
