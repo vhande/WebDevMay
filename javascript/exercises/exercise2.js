@@ -231,12 +231,62 @@ let users = [
     }
   ]
 
+// toUpperCase array values filtered by their name
+
+function filterData (myArr) {
+    //filter here
+    return myArr.filter(x => x.id == 3)
+ 
+}
+
+function changeLetterToUpperCase(filteredArr) {
+    //changing username letters to uppercase
+    // once bos bi array olusturup sonra arrayi update edip sonra bos arraye koyuyoruz
+
+    let temp = [];
+    filteredArr.forEach(function(user){
+        user.name = user.name.toUpperCase()
+        temp.push(user)
+    })
+    return temp;
+}
+
+function printerService(getArr) {
+    // prints the filtered data
+    const getResult = filterData(changeLetterToUpperCase(getArr));
+    console.log(getResult);
+}
+
+printerService(users);
+
+/*function filterData (myArr) {
+    //filter here
+    
+    return myArr += "INTEC";
+
+}
+
+function changeLetterToUpperCase(filteredData) {
+    //changing username letters to uppercase
+    return filteredData.toUpperCase();
+}
+
+function printerService(getFilteredData) {
+    // prints the filtered data
+    const getResult = filterData(changeLetterToUpperCase(getFilteredData));
+    console.log(getResult);
+}
+
+printerService("Hello World"); */
+
+
+
   //this is an array of objects
 
 
   // filter user data
 
-const filteredUsers = users.filter(user => user.id == 5)
+/*const filteredUsers = users.filter(user => user.id == 5)
 
     
 
@@ -246,9 +296,11 @@ console.log(filteredUsers)  // it returns an array list
 filteredUsers.forEach(function(user) {
     user.address.city = "Brussel";
     console.log(`Fullname ${user.name}\nUsername ${user.username}\nEmail: ${user.email}\nCity: ${user.address.city}\nGeolocation:${user.address.geo.lng}\n`)
-})
+}) */
 
-const itsMe = [{
+
+
+/*const itsMe = [{
     username: "handexyz",
     city: "Gent",
     email: "xyz@xyz.com",
@@ -265,12 +317,16 @@ const itsMe = [{
             "lat":36.42,
             "long": 26.45
         }
-    }
+    },
+    skills: ["html,css,javascript"]
+    
 }]
 
 itsMe.forEach(function(element) {
-   let data = `My username is ${element.username}\nMy city is ${element.city}\nMy house number is ${element.address.housenumber}\nI worked at ${element.experience.company.name}`
+   let data = `My username is ${element.username}\nMy city is ${element.city}\nMy house number is ${element.address.housenumber}\nI worked at ${element.experience.company.name}\nMy skills ${element.skills.join("-")}` 
    data = data.toUpperCase();
    console.log(data);
-})
+}) */
+
+
 
