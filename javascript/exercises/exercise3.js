@@ -2,7 +2,7 @@
 const numbers = [12, 15, 32, 42, 55, 75, 122, 132, 150, 180, 200]
 
 numbers.forEach(item => {
-    if(item % 5 == 0 && item <150)
+    if (item % 5 == 0 && item <150)
     console.log(item)
 });
 

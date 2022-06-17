@@ -78,73 +78,86 @@ var input = document.getElementById("input");
 var button = document.getElementById("search");
 var result = document.getElementById("result");
 
+function
+let getPassedStudents = _students.filter(student => student.name == input.value);
+        
+console.log(getPassedStudents[0].score)
 
-let whoPassedArray = []
 
-function whopassed(){
 
-    let inputValue = input.value;
 
-   //console.log(inputValue);
 
-    let getStudent = _students.filter(student=>student.name == inputValue);
 
-    console.log(getStudent.length);
+
+
+
+
+
+
+
+// function whopassed(){
+
+//     let inputValue = input.value;
+
+//    //console.log(inputValue);
+
+//     let getStudent = _students.filter(student=>student.name == inputValue);
+//     console.log(getStudent.length);
 
    
 
-    // if(getStudent.length > 0){
+//     // if(getStudent.length > 0){
 
-    //     let isStudentPassedExam = getStudent[0].score >=50? 'Student passed the exam':'Student failed the exam';
+//     //     let isStudentPassedExam = getStudent[0].score >=50? 'Student passed the exam':'Student failed the exam';
 
-    //     console.log(isStudentPassedExam)
+//     //     console.log(isStudentPassedExam)
 
-    // }else{
+//     // }else{
 
-    //     console.log('Student not found')
+//     //     console.log('Student not found')
 
-    // }
-
-
-
-    let result = getStudent.length > 0 ? (getStudent[0].score >=50? 'Student passed the exam':'Student failed the exam') : 'Student not found';
-
-    //console.log(getStudent);
-
-   console.log(result)    
-
-    // _students.forEach(student=>{
-
-    //    student.score >=50? whoPassedArray.push(student):console.log(`${student.name} failed the exam`);
-
-    // })
+//     // }
 
 
 
-    // //console.log(whoPassedArray);
+//     let result = getStudent.length > 0 ? (getStudent[0].score >=50? 'Student passed the exam':'Student failed the exam') : 'Student not found';
 
-    // whoPassedArray.forEach(student=>{
+//     //console.log(getStudent);
 
-    //     console.log(`${student.name} passed the exam with a score of ${student.score}`)
+//    console.log(result)    
 
-    // })
+//     // _students.forEach(student=>{
 
-}
+//     //    student.score >=50? whoPassedArray.push(student):console.log(`${student.name} failed the exam`);
 
-var btn = document.getElementById("btn");
+//     // })
 
-btn.addEventListener("click", whopassed);
-// for (var i=0; i <passed.length; i++) {
-//     console.log(passed[i]['name'] + " passed with the score " + passed[i]['score']);
+
+
+//     // //console.log(whoPassedArray);
+
+//     // whoPassedArray.forEach(student=>{
+
+//     //     console.log(`${student.name} passed the exam with a score of ${student.score}`)
+
+//     // })
+
 // }
 
-// function whoFailedExam(param) {
-//     return param.filter(x => x.score < 60)
-// }
+// var btn = document.getElementById("btn");
 
-// var failed = whoFailedExam(_students);
-// for (var i=0; i<failed.length; i++) {
-//     console.log(failed[i]['name'] + " failed with the score " + failed[i]['score']);
-// }
+// btn.addEventListener("click", whopassed);
+// // for (var i=0; i <passed.length; i++) {
+// //     console.log(passed[i]['name'] + " passed with the score " + passed[i]['score']);
+// // }
 
-// // console.log(whoPassedExam(_students))
+// // function whoFailedExam(param) {
+// //     return param.filter(x => x.score < 60)
+// // }
+
+// // var failed = whoFailedExam(_students);
+// // for (var i=0; i<failed.length; i++) {
+// //     console.log(failed[i]['name'] + " failed with the score " + failed[i]['score']);
+// // }
+
+// // // console.log(whoPassedExam(_students))

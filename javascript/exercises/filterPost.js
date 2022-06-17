@@ -36,9 +36,9 @@ let posts = [
   var result = document.getElementById("result");
 
 
-  function FindPostById(id) {
-    if (posts.filter(value => value.id == id).length != 0) {
-        return posts.filter(value => value.id == id)
+  function FindPostById(input) {
+    if (posts.filter(value => value.id == input).length != 0) {
+        return posts.filter(value => value.id == input)
     } else {
         return [{ title: 'No post found' }]
     }
@@ -46,10 +46,9 @@ let posts = [
     // return posts.filter(value=>value.id==id)
 }
 
- button.addEventListener('click', (e) => {     
-  e.preventDefault()
+ button.addEventListener('click', () => {
      console.log('hellooooooo',filter.value)    
-      let post = FindPostById(filter.value)[0]
+     let post = FindPostById(filter.value)[0]
      console.log(post.title)
     result.innerText = post.title
  })
