@@ -36,34 +36,20 @@ let posts = [
   var result = document.getElementById("result");
 
 
-  function getPosts(idnum) {
-    return posts.filter(x => x.id == idnum) 
-      // her bi object icin (x) (x.id id parametresine esitse)
-  }
+  function FindPostById(id) {
+    if (posts.filter(value => value.id == id).length != 0) {
+        return posts.filter(value => value.id == id)
+    } else {
+        return [{ title: 'No post found' }]
+    }
+    // console.log(posts.filter(value=>value.id==id))
+    // return posts.filter(value=>value.id==id)
+}
 
-
-
-  button.addEventListener('click', getPosts(filter.value))
-
- 
-
-  // function FindPostById(id) {
-  //   if (posts.filter(value => value.id == id).length != 0) {
-  //       return posts.filter(value => value.id == id)
-  //   } else {
-  //       return [{ title: 'No post found' }]
-  //   }
-  // }
-  // button.addEventListener("click", (e) => { e.preventDefault()
-  //   let post = FindPostById(filter.value)[0]
-  //       console.log(post.title)
-  //       result.innerText = post.title 
-  // })
-  
-  
-
-
-
-
-
-  
+ button.addEventListener('click', (e) => {     
+  e.preventDefault()
+     console.log('hellooooooo',filter.value)    
+      let post = FindPostById(filter.value)[0]
+     console.log(post.title)
+    result.innerText = post.title
+ })

@@ -259,6 +259,41 @@ function printerService(getArr) {
 
 printerService(users);
 
+
+// to add up numbers in an array
+
+var numbers = [55,42, 0,3,7,1,9,333]
+
+let result = numbers.reduce(function(accumulator,currentValue){
+    // console.log("Accumulator:", accumulator)
+    // console.log("Current value:", currentValue)
+    return accumulator + currentValue
+
+})
+
+result=numbers.reduceRight(function(accumulator,currentValue) {
+    return accumulator + currentValue
+})
+
+
+
+//fill method you change all the value with 5
+
+result = numbers.fill(5)
+
+var nestedArray = [1,2,3,[4,5,6,[7,8,9,10]]];
+
+// flat array method to remove nesting
+
+result = nestedArray.flat(2);
+console.log(result)
+
+
+var n1= [4,5,6,6]
+var n2=[7,8,5,3]
+result = [n1,n2]; 
+console.log(result)
+
 /*function filterData (myArr) {
     //filter here
     
