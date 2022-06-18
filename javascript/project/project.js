@@ -161,7 +161,13 @@ const houses = [
     tuin: true}
 ];
 
-  
-    
+var input = "huis"
 
-      ]
+function myFunc (input) {
+let filteredPand = houses.filter(search => search.pand == input);
+for (let i = 0; i<filteredPand; i++) {
+    console.log(filteredPand[i])
+}
+}
+
+myFunc("huis")
