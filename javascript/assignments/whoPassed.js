@@ -161,3 +161,5 @@ console.log(getPassedStudents[0].score)
 // // }
 
 // // // console.log(whoPassedExam(_students))
+
+//test
