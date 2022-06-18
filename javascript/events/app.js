@@ -31,3 +31,5 @@ function registerClickHandler(event) {
 }
 
 login.addEventListener("click", registerClickHandler);
+
+// some update
