@@ -78,7 +78,7 @@ var input = document.getElementById("input");
 var button = document.getElementById("search");
 var result = document.getElementById("result");
 
-function
+
 let getPassedStudents = _students.filter(student => student.name == input.value);
         
 console.log(getPassedStudents[0].score)
