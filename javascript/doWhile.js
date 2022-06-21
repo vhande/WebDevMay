@@ -70,12 +70,21 @@ while(x<10){
     console.log(`${x} + ${total} = ${total}`)
 }
 
-while(x<100) {
-    x++
-    if(x%3 == 0) {
-        console.log(x);
-        if (x>50) {
-            break;
-        }
-    }
+// while(x<100) {
+//     x++
+//     if(x%3 == 0) {
+//         console.log(x);
+//         if (x>50) {
+//             break;
+//         }
+//     }
+// }
+
+
+i = 100;
+while (i< 200)
+
+{   i++
+    console.log(i)
+    
 }
