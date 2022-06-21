@@ -10,7 +10,7 @@ result = myText[myText.length-1];
 
 
 // charAt()
-result = myText.charAt(6);
+result = myText.charAt(6)
 
 // concat() method
 
