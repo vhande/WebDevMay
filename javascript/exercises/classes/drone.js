@@ -4,29 +4,27 @@ class drone  {
         this.speed = speed;
         this.battery = battery;
     }
-}
 
-class civilDrone extends drone {
-    constructor (type='drone', speed=50, battery=100) {
-        super(type,speed,battery)
-        this.owners = [];
-
-    }
-
-    registerOwner (deviceId, fullname, address)
-    {
+    registerOwner (deviceId, fullname, address){
         this.owners.push({
-            type: this.type,
-            speed: this.speed,
-            battery: this.battery,  // we take the info from parent
-            deviceId, 
-            fullname, 
-            address
+        type: this.type,
+        speed: this.speed,
+        battery: this.battery,  // we take the info from parent
+        deviceId, 
+        fullname, 
+        address
         })
     }
 
     getOwners () {
         return this.owners;
+    }
+}
+
+class civilDrone extends drone {
+    constructor (type='some drone', speed=50, battery=100) {
+        super(type,speed,battery)
+        this.owners = [];
     }
 }
 
@@ -34,22 +32,6 @@ class militaryDrone extends drone {
     constructor (type='drone', speed=150, battery=100) {
         super(type,speed,battery)
         this.owners = [];
-    }
-
-    registerOwner (deviceId, fullname, address)
-    {
-        this.owners.push({
-            type: this.type,
-            speed: this.speed,
-            battery: this.battery,  // we take the info from parent
-            deviceId, 
-            fullname, 
-            address
-        })
-    }
-
-    getOwners () {
-        return this.owners;
     }
 }
 
@@ -61,5 +43,4 @@ console.log(drone1.getOwners())
 let drone2 = new militaryDrone ()
 drone2.registerOwner("4343542KLD", "Steven Steve", "3425 Street");
 drone2.registerOwner("056057JGJ", "Doe Doe", "4320 Street")
-
 console.log(drone2.getOwners())
