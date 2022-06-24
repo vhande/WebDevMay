@@ -44,3 +44,6 @@ let drone2 = new militaryDrone ()
 drone2.registerOwner("4343542KLD", "Steven Steve", "3425 Street");
 drone2.registerOwner("056057JGJ", "Doe Doe", "4320 Street")
 console.log(drone2.getOwners())
+drone1.getOwners().forEach(item => {
+    console.log(`Speed is ${item.speed}`)
+});
