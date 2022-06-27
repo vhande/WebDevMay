@@ -46,4 +46,5 @@ drone2.registerOwner("056057JGJ", "Doe Doe", "4320 Street")
 console.log(drone2.getOwners())
 drone1.getOwners().forEach(item => {
     console.log(`Speed is ${item.speed}`)
-});
+})
+  
