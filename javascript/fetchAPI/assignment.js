@@ -21,16 +21,23 @@ Alexandria21:iTMU5kWTFriM_i4
 Cesar67:lvKUIHenNexA3mS
 Ryder.Gibson:HZ47I0WeHZhVwW4`
 
-var arr = userAccounts.split('\n')
-console.log(arr)
-arr.map(item => { item.split(":")
-    var newArr = []
-    var obj = {username: }})
+const btn = document.getElementById('btn')
 
+var result = userAccounts.split("\n")
 
-
+btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    result.forEach(item => {
+    let info = item.split(":")
+    let obj = {
+        username: info[0],
+        password: info[1]
+    }
+console.log(obj)
+})
+  
+})
     
-     
 
 
 
