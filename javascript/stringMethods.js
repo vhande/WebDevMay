@@ -62,6 +62,11 @@ var myText2 = "              lorem          ipsum                ";
 result = myText2.trim().slice(0,6).concat(myText2.trim().slice(myText2.length-31));
 
 
+// slice sondaki 3 karakteri almak icin 
+function myFunction(str) {
+    return str.slice(-3);
+ }
+
 
 var myNewText = "lorem ipsum BELGIUM hande hande 1234567890"
 result = myNewText.match(/hande/)

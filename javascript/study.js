@@ -75,3 +75,58 @@ let mergedObj2 = merge ({}, obj1, obj2);
 console.log(mergedObj)
 const mergedTry = {...obj3, ...obj4}
 console.log(mergedTry)
+
+function myFunction(a,n) {
+    console.log(a[n-1])
+}
+
+myFunction('abcd',1)
+myFunction('zyxbwpl',5)
+myFunction('gfedcba',3)
+
+
+function myFun (a, b)
+{
+for ( let v in a) {
+if (b === v) {
+return true
+}
+return false 
+}
+}
+
+console.log(myFun({ a: 0, b: 2, c: 4 }, 'b'))
+
+let saying = "Hello"
+let bye = 345
+console.log('Hande said', saying, 'then she said', bye)
+
+console.log(typeof NaN)
+
+const numberss = [1,25,3,4,5]
+
+numberss.sort((a, b) => a - b)
+ 
+for (let i = 0; i < numberss.length; i++) {
+    if (numberss[i] == 5) {
+       console.log(numberss[i])
+}
+}
+
+
+const products = [
+    {name:"klavye", price:1115},
+    {name:"mouse", price:815},
+    {name:"bilgisayar", price:8815},
+    {name:"kulaklik", price:1815},
+    {name:"ses sistemi", price:11815},
+    {name:"klphone", price:9815},
+]
+
+for (let i = 0; i < products.length; i++) {
+    if (products[i].price == 8815) {
+     console.log(products[i].name)  
+    }
+
+}
+
