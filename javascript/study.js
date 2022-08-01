@@ -124,9 +124,10 @@ const products = [
 ]
 
 for (let i = 0; i < products.length; i++) {
-    if (products[i].price == 8815) {
+    if (products[i].price < 2000) {
      console.log(products[i].name)  
     }
 
 }
+
 
