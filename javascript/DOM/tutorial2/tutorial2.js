@@ -8,6 +8,7 @@ result = document.getElementsByTagName('p')
 Array.from(result).forEach(text =>  {
     text.innerText = "Blalalala"
 })
+// HTML collection'a dondugu icin ve bu bir array olmadigi icin Array.from(result) yaparak array'e donusturuyoruz
 
 
 result = document.getElementsByTagName('label')
@@ -24,6 +25,13 @@ result.forEach(col=>{
 })
 
 
-console.log(result)
 
 console.log("Hello")
+
+
+result = localStorage.getItem('blabla')
+result = localStorage.length
+result = localStorage.removeItem('blabla')
+result = localStorage.setItem('data', 'secret')
+
+console.log(result)
