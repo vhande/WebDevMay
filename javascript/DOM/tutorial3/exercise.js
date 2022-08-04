@@ -121,26 +121,52 @@ console.log(table, thead)
   </div> */
 
 
+// const cloneOfCard = carddiv.cloneNode(true)
+
+// document.body.append(cloneOfCard)
+
+// cloneOfCard.children[1].children[0].innerText = "New Title"
+
+// cloneOfCard.children[1].lastChild.classList.remove('btn-primary')
+
+// cloneOfCard.children[1].lastChild.classList.add('btn-danger')
+
+
+function makeCards (image,title,description,btncolor, btntext) {
+
 const carddiv = g('div')
 carddiv.className = "card"
 carddiv.setAttribute("style", "width: 18rem;")
 const cardimg = g('img')
 cardimg.className = "card-img-top"
-cardimg.src = "https://picsum.photos/200" 
+cardimg.src = `${image}` 
 cardimg.setAttribute('alt','Card image cap')
 const cardbody = g('div')
 cardbody.className = "card-body"
 const cardh5 = g('h5')
 cardh5.className ="card-title"
-cardh5.append("Card Title")
+cardh5.innerText = `${title}`
 const cardp = g('cardp')
 cardp.className = "card-text"
-cardp.innerText = "Some quick example text to build on the card title and make up the bulk of the card's content."
+cardp.innerText = `${description}`
 const carda = g('carda')
-carda.className = "btn btn-primary"
-carda.append("Go Somewhere")
+carda.classList.add("btn")
+carda.classList.add(btncolor != undefined ? btncolor:'btn-primary')
+carda.innerText = btntext
 
 cardbody.append(cardh5, cardp, carda)
 carddiv.append(cardimg,cardbody)
-document.body.append(carddiv)
 
+return document.body.append(carddiv)
+
+}
+
+ makeCards("https://picsum.photos/200", 'Test test test', "Lorem lorem ipsum ipsum",'btn-success',"Click me")
+ makeCards("https://picsum.photos/200", 'This is a card', "Lorem lorem ipsum ipsum",'btn-danger',"Click me")
+ makeCards("https://picsum.photos/200", 'This is a card', "Lorem lorem ipsum ipsum",undefined,"Click me")
+
+
+
+document.querySelector(".btn").addEventListener('click', () => {
+    document.body.removeChild(document.body.children[5])
+})
