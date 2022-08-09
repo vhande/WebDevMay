@@ -52,11 +52,6 @@ deleteAll.addEventListener('click', (e)=>
     })
 })
 
-// for(let i = 0; i < data.length; i++) {
-//     fetch(`http://localhost:5000/books/${[i]}`, {method:'DELETE'})
-//     .then(res=>res.json())
-//     .then(data=>console.log('DELETE request: ',data))
-// }
  // <tr>
     //                         <th scope="row">1</th>
     //                         <td>Thus spoke zarathustra</td>
