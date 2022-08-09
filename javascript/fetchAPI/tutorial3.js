@@ -54,7 +54,11 @@ patchBtn.addEventListener('click', e=> {
 
 deleteBtn.addEventListener('click', e=> {
     e.preventDefault()
-    fetch('http://localhost:5000/api/3', {method:'DELETE'})
+    fetch('http://localhost:5000/api/3',{
+        method:'DELETE'
+    })
     .then(res=>res.json())
-    .then(data=>console.log('DELETE request: ',data))
+    .then(data=>{
+        console.log('deleted: ',data)
+    })
 })
