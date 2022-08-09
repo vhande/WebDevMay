@@ -131,3 +131,15 @@ for (let i = 0; i < products.length; i++) {
 }
 
 
+var compare = "2" / 3
+console.log(compare)
+
+var q = y = 3;
+numnum = [1,2,3].fill(0,q,y)
+console.log(numnum[0] *2)
+
+function hello () {
+    return "Hello World!"
+}
+
+console.log(hello())
