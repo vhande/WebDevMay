@@ -25,14 +25,18 @@ document.addEventListener('keypress', e => {
         document.querySelectorAll('audio')[1].play() 
         case "d": 
         document.querySelectorAll('audio')[2].play()  
-        case "g": 
+        case "f": 
         document.querySelectorAll('audio')[3].play() 
-        case "h": 
+        case "g": 
         document.querySelectorAll('audio')[4].play() 
-        case "j": 
+        case "h": 
         document.querySelectorAll('audio')[5].play() 
-        case "l": 
+        case "j": 
         document.querySelectorAll('audio')[6].play() 
+        case "k": 
+        document.querySelectorAll('audio')[7].play()
+        case "l": 
+        document.querySelectorAll('audio')[8].play()
     }
     
         console.log("Hello" ,e.key)
