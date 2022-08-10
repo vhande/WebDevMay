@@ -7,7 +7,7 @@ const bookPrice =document.getElementById('price')
 const bookCategory = document.getElementById('book_category')
 const tbody = document.querySelector('tbody')
 
-
+// putting data in the database
 document.querySelector('.addbookbtn').addEventListener('click',(e)=>{
     fetch('http://localhost:5000/books',{
         method:'POST',
@@ -29,17 +29,21 @@ document.querySelector('.addbookbtn').addEventListener('click',(e)=>{
     })
 })
 
+
+//fetch from the database
 async function getData () {
     let res = await fetch('http://localhost:5000/books')
     let data = await res.json()
     return data
 }
 
+//put the items on the list on the webpage
 document.addEventListener('DOMContentLoaded', (e)=> {
     getData() 
     .then(data => data.forEach(el => domAppend(el)))
 })
 
+//delete all items 
 deleteAll.addEventListener('click', (e)=>
 {e.preventDefault()
     tbody.innerHTML = " "
@@ -52,6 +56,16 @@ deleteAll.addEventListener('click', (e)=>
     })
 })
 
+// Deleting items by one by when clicking on the trash icon
+document.addEventListener('click', (e) => {
+    fetch(`http://localhost:5000/books/${e.target.getAttribute("id")}`, {method:'DELETE'})
+    .then(res=>res.json())
+    //console.log(e.target)
+    //console.log(e.target.getAttribute("id"))
+})
+
+
+// Template of the <tr>
  // <tr>
     //                         <th scope="row">1</th>
     //                         <td>Thus spoke zarathustra</td>
@@ -62,12 +76,16 @@ deleteAll.addEventListener('click', (e)=>
     //                         <td><a href="#"><i class="fa fa-trash lead" aria-hidden="true"></i></a></td>
     //                     </tr>
 
+//function to create DOM elements
 const g = t => document.createElement(t)
-function domAppend(obj) {
 
+// function to create a line on the table
+function domAppend(obj) {
     const tr = g('tr')
     const th = g('th')
     const td1 = g('td')
+    const id = document.createTextNode(obj.id)
+    th.append(id)
     const name = document.createTextNode(obj.Name)
     td1.append(name)
     const td2 = g('td')
@@ -82,10 +100,22 @@ function domAppend(obj) {
     const td5 = g('td')
     const price = document.createTextNode(obj.Price)
     td5.append(price)
+    const td6 = g('td')
     tr.append(th)
-    tr.append(td1,td2,td3,td4,td5)
+    tr.append(td1,td2,td3,td4,td5,td6)
+    const euro = g('i')
+    euro.className = "fa fa-eur"
+    euro.setAttribute("aria-hidden","true")
+    td5.append(euro)
+    const trash = g('i')
+    const link = g('a')
+    link.href="#"
+    trash.setAttribute("id", obj.id)
+    trash.className = "fa fa-trash lead"
+    trash.setAttribute("aria-hidden","true")
+    link.append(trash)
+    td6.append(link)
     return tbody.append(tr) }
-
 
 
 
