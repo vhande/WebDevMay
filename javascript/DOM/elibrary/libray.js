@@ -7,6 +7,7 @@ const bookPrice =document.getElementById('price')
 const bookCategory = document.getElementById('book_category')
 const tbody = document.querySelector('tbody')
 
+
 // putting data in the database
 document.querySelector('.addbookbtn').addEventListener('click',(e)=>{
     fetch('http://localhost:5000/books',{
@@ -57,11 +58,11 @@ deleteAll.addEventListener('click', (e)=>
     })
 })
 
-// Deleting items by one by when clicking on the trash icon
-   tbody.addEventListener('click', (e) => {
-    fetch(`http://localhost:5000/books/${e.target.getAttribute("id")}`, {method:'DELETE'})
-    .then(res=>res.json()) 
-    e.preventDefault() })
+// // Deleting items by one by when clicking on the trash icon
+//    tbody.addEventListener('click', (e) => {
+//     fetch(`http://localhost:5000/books/${e.target.getAttribute("id")}`, {method:'DELETE'})
+//     .then(res=>res.json()) 
+//     e.preventDefault() })
 
     //console.log(e.target)
     //console.log(e.target.getAttribute("id")) 
@@ -81,7 +82,7 @@ deleteAll.addEventListener('click', (e)=>
 //function to create DOM elements
 const g = t => document.createElement(t)
 
-// function to create a line on the table
+// function to create a line on the table and also DELETE THEM ONE BY ONE
 function domAppend(obj) {
     const tr = g('tr')
     const th = g('th')
@@ -117,4 +118,8 @@ function domAppend(obj) {
     trash.setAttribute("aria-hidden","true")
     link.append(trash)
     td6.append(link)
-    return tbody.append(tr) }
+    tbody.append(tr) 
+    
+    trash.addEventListener('click', e => { fetch(`http://localhost:5000/books/${e.target.getAttribute("id")}`, {method:'DELETE'})
+    .then(res=>res.json()) 
+    e.preventDefault() })}

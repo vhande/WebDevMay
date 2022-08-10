@@ -1,28 +1,3 @@
 {
-  "books": [
-    {
-      "Name": "Bllala",
-      "Author": "Lalll",
-      "Category": "History",
-      "Date": "4444-03-12",
-      "Price": "4444",
-      "id": 12
-    },
-    {
-      "Name": "Lalal",
-      "Author": "fffff",
-      "Category": "History",
-      "Date": "33333-03-12",
-      "Price": "",
-      "id": 15
-    },
-    {
-      "Name": "AAAAA",
-      "Author": "",
-      "Category": "Choose category...",
-      "Date": "",
-      "Price": "323232",
-      "id": 16
-    }
-  ]
+  "books": []
 }
