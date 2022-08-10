@@ -26,6 +26,7 @@ document.querySelector('.addbookbtn').addEventListener('click',(e)=>{
     .then(res=>res.json())
     .then(data=>{
         console.log(`PUT request: ${data}`)
+    .finally(window.location.reload())
     })
 })
 
@@ -57,12 +58,13 @@ deleteAll.addEventListener('click', (e)=>
 })
 
 // Deleting items by one by when clicking on the trash icon
-document.addEventListener('click', (e) => {
+   tbody.addEventListener('click', (e) => {
     fetch(`http://localhost:5000/books/${e.target.getAttribute("id")}`, {method:'DELETE'})
-    .then(res=>res.json())
+    .then(res=>res.json()) 
+    e.preventDefault() })
+
     //console.log(e.target)
-    //console.log(e.target.getAttribute("id"))
-})
+    //console.log(e.target.getAttribute("id")) 
 
 
 // Template of the <tr>
@@ -107,7 +109,7 @@ function domAppend(obj) {
     euro.className = "fa fa-eur"
     euro.setAttribute("aria-hidden","true")
     td5.append(euro)
-    const trash = g('i')
+    trash = g('i')
     const link = g('a')
     link.href="#"
     trash.setAttribute("id", obj.id)
@@ -116,7 +118,3 @@ function domAppend(obj) {
     link.append(trash)
     td6.append(link)
     return tbody.append(tr) }
-
-
-
-
