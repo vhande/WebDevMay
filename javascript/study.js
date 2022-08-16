@@ -142,4 +142,4 @@ function hello () {
     return "Hello World!"
 }
 
-console.log(hello())
+console.log(typeof undefined)
