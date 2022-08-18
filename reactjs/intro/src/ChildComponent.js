@@ -1,7 +1,9 @@
 import SocialIcons from "./components/SocialIcons";
 import {companyName,doMath,students}  from "./components/Users";
+import ChildOfChild from "./ChildOfChild";
 
-function ChildComponent () {
+
+function ChildComponent ({name}) {
     // define a variable
     const companyName = "Google";
     const getSumResult = 5+7
@@ -34,7 +36,7 @@ function ChildComponent () {
                 
             return (
 
-            a === 'Joe' ? <h1>Hello,Joe</h1> : <h1>Hello,Visitor</h1>
+            a === 'James' ? <h1>Hello,James</h1> : <h1>Hello,Visitor</h1>
             )
              
             })
@@ -44,6 +46,12 @@ function ChildComponent () {
             {
                 false ? <h1>Hello</h1> : <h1>Goodbye</h1>
             }
+
+            {
+                [...[1,2,3,4]]
+            }
+            {name}
+            <ChildOfChild newName={name}/>
         </div>
     )
 }
