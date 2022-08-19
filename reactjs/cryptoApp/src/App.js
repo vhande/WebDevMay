@@ -18,41 +18,28 @@ function App() {
     }
 
 
-
-    // function capitalizeFirstLetter(string) {
-    //     return string.charAt(0).toUpperCase() + string.slice(1);
-    //   }
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
       
-     
-    // const search = (e) => {
-      
-    //           var element = info.filter(item => item.name === capitalizeFirstLetter(document.getElementById('x').value))
-    //           setCurrent(element)
-              
+    const findBar = (e) => {
 
-    //          var domelement = (<li>{current.name} -></li>)
+              fetchData()
+              var element = info.filter(item => item.name === capitalizeFirstLetter(e.target.value))
+              setCurrent(element)
+              console.log(current) }
+    
 
-    //          const container = document.getElementById('deneme');
-    //          const root = ReactDOMClient.createRoot(container);
-    //          root.render(domelement);
-
-             
-        
-            
-
-           
-
-              
-        
+    
   return (
     <Container fluid="md">
-        <Form.Control className="mt-4"
+        <Form.Control onChange={findBar} className="mt-4"
                 placeholder="Type the cryptocurrency name"
                 aria-label="currency"
                 aria-describedby="basic-addon1" id="x"></Form.Control>
         <Row className="justify-content-center p-4">
             <Col md={2}>
-    <Button onClick={fetchData} size="lg" validation="success">Check<FiRefreshCw/> </Button>
+    <Button onClick={fetchData} size="lg" validation="success">Check <FiRefreshCw/> </Button>
             </Col>
             <Col md={10}>
                 <ul id="deneme">
@@ -67,6 +54,7 @@ function App() {
         
     </Container>
   )
+
 }
 
 export default App
