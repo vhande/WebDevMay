@@ -9,27 +9,27 @@ function App() {
     const [info, setInfo] = useState([])
     const [current, setCurrent] = useState([])
     const fetchData = async () => {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    const proxyUrl = 'https://arkakapi.herokuapp.com/',
     targetUrl = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=46cb6a30-7b16-428c-833a-0f1a4642c3dc&sort=market_cap&start=1&limit=10&cryptocurrency_type=tokens&convert=EUR'
 
     const res =  await fetch(proxyUrl + targetUrl)
     const data = await res.json()
+    .catch(e=>console.log(e))
     setInfo(data.data)
     }
 
-
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
       
+
     const findBar = (e) => {
+              
+              const value = e.target.value + " "
 
-              fetchData()
-              var element = info.filter(item => item.name === capitalizeFirstLetter(e.target.value))
+              var element = info.filter(item => item.name === value)
               setCurrent(element)
-              console.log(current) }
+              console.log(current, value)
+               }
     
-
+    
     
   return (
     <Container fluid="md">
