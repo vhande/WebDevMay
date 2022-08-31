@@ -1,0 +1,16 @@
+.carousel-item > img {
+    height: 30em;
+    object-fit: cover;
+    object-position: center;
+}
+
+#logo {
+    width:2em;
+}
+
+.slider {
+    height: 1em !important;
+    width: 1em !important;
+    border-radius: 100% !important;
+}
+

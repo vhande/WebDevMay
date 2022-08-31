@@ -1,0 +1,13 @@
+body {
+    background-color: #F0EBE3
+}
+
+h1 {
+    color: #1C3879
+}
+
+#disabled {
+    background-color: #DEB6AB;
+    color: black;
+}
+
