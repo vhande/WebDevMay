@@ -17,6 +17,9 @@ const userSchmema = new mongoose.Schema({
         },
     expense: {
         type:Array
+    },
+    expensename: {
+        type:Array
     }
 })
 
@@ -31,6 +34,10 @@ prompt.get(['name','income'], (err,user) => {
     User.exists({name:user.name}) 
     .then(res => res === null ? newUser.save() 
     .then(data=>console.log("Income is saved"))
+    .finally(() => setTimeout(() => {
+        console.clear()
+        Menu()
+    }, 2000))
     
     : 
     User.findOne({name:user.name})
@@ -39,6 +46,10 @@ prompt.get(['name','income'], (err,user) => {
         console.log(total,"this is total")
         User.findOneAndUpdate({name:user.name}, {income:total})
         .then(data=>data)
+        .finally(() => setTimeout(() => {
+            console.clear()
+            Menu()
+        }, 2000))
     }
     )
 )})
@@ -47,6 +58,8 @@ prompt.get(['name','income'], (err,user) => {
 function addExpense () {
     prompt.get(['name','expense','amount'], (err,user) => {
     User.findOneAndUpdate({name:user.name}, {$push:{expense:user.amount}})
+    .then(data=>data)
+    User.findOneAndUpdate({name:user.name}, {$push:{expensename:user.expense}})
     .then(data=>console.log('Expense added'))
     .finally(() => setTimeout(() => {
         console.clear()
@@ -56,6 +69,39 @@ function addExpense () {
   
 }
 
+function showAll () {
+    prompt.get(['name'], (err,user) => { 
+        User.findOne({name:user.name})
+        .then(data=> console.table([data.expensename,data.expense])) 
+        .finally(() => {
+            console.log('To return menu press 0')
+            prompt.get(['return'], (err, answer) => {
+                if (answer.return === '0') {
+                    console.clear()
+                    Menu()
+                }
+            })
+        })
+    })
+}
+
+function deleteExpense () {
+    prompt.get(['name','expense'], (err,user) => {
+        User.exists({name:user.name})
+        .then(res=> res === null ?
+            console.log(`User doesn't exist`)
+            : 
+            User.findOneAndDelete({
+                email:user.email   })
+            .then(() => console.log('Deleted'))
+            )
+            .finally(() => setTimeout(() => {
+                console.clear()
+                Menu()
+            }, 2000))
+        }) 
+    }
+
 
 function calculate () {
     prompt.get(['name'], (err, user) => {
@@ -63,14 +109,23 @@ function calculate () {
       let expenses = 0;
       User.findOne({name:user.name})
       .then(data => {total= data.income
-       data.expense.map(item=> expenses += item)
-      console.log(Number(total) - Number(expenses))
+       data.expense.map(item=> expenses += Number(item))
+      console.log(Number(total) - Number(expenses)) 
     }) 
+    .finally(() => {
+        console.log('To return menu press 0')
+        prompt.get(['return'], (err, answer) => {
+            if (answer.return === '0') {
+                console.clear()
+                Menu()
+            }
+        })
+    })
     })
 }
 
 prompt.start();
-function Menu() {4
+function Menu() {
     console.log(`\x1b[36m
         █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
         █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
@@ -85,6 +140,9 @@ prompt.get(['option'], (err, opt) => {
             break;
         case '2':
             addExpense()
+            break;
+        case '3':
+            showAll()
             break;
         case '4':
             calculate()
